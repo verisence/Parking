@@ -34,13 +34,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
        if (view == mLoginButton){
-           String username = mLoginUsername.getText().toString();
-           Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+           if (mLoginUsername.getText().toString().equals("")||mLoginPassword.getText().toString().equals("")){
 
-           intent.putExtra("username", username);
-           startActivity(intent);
+               Toast.makeText(LoginActivity.this, "Please fill all the fields first", Toast.LENGTH_LONG).show();
 
-           Toast.makeText(LoginActivity.this, "Welcome " + username, Toast.LENGTH_LONG).show();
+           }else{
+               String username = mLoginUsername.getText().toString();
+               Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+
+               intent.putExtra("username", username);
+               startActivity(intent);
+
+               Toast.makeText(LoginActivity.this, "Welcome " + username, Toast.LENGTH_LONG).show();
+           }
+
        }
     }
 }
