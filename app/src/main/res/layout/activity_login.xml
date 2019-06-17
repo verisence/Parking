@@ -10,7 +10,7 @@
     android:paddingRight="20dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/loginUsername"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -20,14 +20,16 @@
         android:hint="@string/username"
         android:inputType="textPersonName"
         android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginPassword"
+        app:layout_constraintEnd_toEndOf="@+id/loginPassword"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/loginPassword"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/loginPassword"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -36,7 +38,9 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:singleLine="true"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/loginUsername"
         tools:layout_editor_absoluteX="24dp" />
 
     <Button
@@ -46,8 +50,8 @@
         android:layout_marginTop="148dp"
         android:background="@drawable/circ_button"
         android:text="@string/submit"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintEnd_toEndOf="@+id/loginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
 
     <TextView
         android:id="@+id/textView"
