@@ -16,7 +16,7 @@
         android:id="@+id/homeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/locate_parking"
+        android:text="@string/egeza"
         android:textColor="@color/accent"
         android:textAllCaps="true"
         android:textSize="40sp"

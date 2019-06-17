@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="@+id/loginPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/loginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/loginText" />
 
     <EditText
         android:id="@+id/loginPassword"
@@ -61,6 +61,7 @@
         android:layout_marginTop="68dp"
         android:text="@string/details"
         android:textColor="@color/icons"
+        android:textAllCaps="true"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
