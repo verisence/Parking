@@ -2,4 +2,5 @@
     <string name="app_name">Parking</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="locate_parking">Locate Parking</string>
+    <string name="go">Go</string>
 </resources>
