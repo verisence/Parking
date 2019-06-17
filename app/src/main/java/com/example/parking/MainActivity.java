@@ -3,6 +3,7 @@ package com.example.parking;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mHomeGobutton = (Button) findViewById(R.id.homeGoButton);
         mHomeTextView = (TextView) findViewById(R.id.homeTextView);
+
+        Typeface proximaLight = Typeface.createFromAsset(getAssets(), "fonts/light.ttf");
+        Typeface proximaMedium = Typeface.createFromAsset(getAssets(), "fonts/med.ttf");
+        Typeface proximaBold = Typeface.createFromAsset(getAssets(), "fonts/bold.ttf");
+
+        mHomeGobutton.setTypeface(proximaMedium);
+        mHomeTextView.setTypeface(proximaBold);
+
 
         mHomeGobutton.setOnClickListener(this);
     }
