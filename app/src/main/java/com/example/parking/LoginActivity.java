@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
            intent.putExtra("username", username);
            startActivity(intent);
 
-
+           Toast.makeText(LoginActivity.this, "Welcome " + username, Toast.LENGTH_LONG).show();
        }
     }
 }
