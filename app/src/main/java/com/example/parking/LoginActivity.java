@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
            }else{
                String username = mLoginUsername.getText().toString();
-               Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+               Intent intent = new Intent(LoginActivity.this, CarParkActivity.class);
 
                intent.putExtra("username", username);
                startActivity(intent);
