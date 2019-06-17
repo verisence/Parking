@@ -3,6 +3,7 @@ package com.example.parking;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.service.autofill.Validator;
 import android.view.View;
@@ -28,6 +29,13 @@ public class CarParkActivity extends AppCompatActivity {
         mWelcomeText = (TextView) findViewById(R.id.welcomeText);
         mParkText = (TextView) findViewById(R.id.parkText);
         mParkListVIew = (ListView) findViewById(R.id.parkListView);
+
+        Typeface proximaLight = Typeface.createFromAsset(getAssets(), "fonts/light.ttf");
+        Typeface proximaMedium = Typeface.createFromAsset(getAssets(), "fonts/med.ttf");
+        Typeface proximaBold = Typeface.createFromAsset(getAssets(), "fonts/bold.ttf");
+
+        mWelcomeText.setTypeface(proximaLight);
+        mParkText.setTypeface(proximaMedium);
 
         CarParksArrayAdapter adapter = new CarParksArrayAdapter(CarParkActivity.this, android.R.layout.simple_list_item_1, parkName, capacity);
 
