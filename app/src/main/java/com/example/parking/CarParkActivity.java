@@ -2,17 +2,23 @@ package com.example.parking;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.service.autofill.Validator;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class CarParkActivity extends AppCompatActivity implements View.OnClickListener {
+public class CarParkActivity extends AppCompatActivity {
 
     private TextView mWelcomeText;
     private TextView mParkText;
     private ListView mParkListVIew;
+    private String[] parkName = {"Egeza", "Moiana Road", "Pochinki Park", "Alpha", "Erangel", "Brass Park", "Terran", "Sky Scale", "Deep House", "Tango", "Foxtrot", "Knox", "Villa", "Delta", "Downtown", "CBD", "Roadside"};
+    private Integer[] capacity = {22,99,4,33,222,0,4,5,66,7,99,23,14,67,89,23,123};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +29,20 @@ public class CarParkActivity extends AppCompatActivity implements View.OnClickLi
         mParkText = (TextView) findViewById(R.id.parkText);
         mParkListVIew = (ListView) findViewById(R.id.parkListView);
 
-        mParkListVIew.setOnClickListener(this);
+        CarParksArrayAdapter adapter = new CarParksArrayAdapter(CarParkActivity.this, android.R.layout.simple_list_item_1, parkName, capacity);
 
-    }
+        mParkListVIew.setAdapter(adapter);
 
-    @Override
-    public void onClick(View view) {
-        CarParksArrayAdapter
+        mParkListVIew.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String carPark = ((TextView)view).getText().toString();
+                Toast.makeText(CarParkActivity.this, carPark, Toast.LENGTH_LONG).show();
+            }
+    });
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+        mWelcomeText.setText("You are logged in as " + username);
+
     }
 }
