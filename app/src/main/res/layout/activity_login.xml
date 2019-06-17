@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_dark"
+    android:orientation="vertical"
     android:paddingLeft="20dp"
     android:paddingRight="20dp">
 
@@ -11,14 +14,48 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="379dp"
-        android:background="@drawable/custom_edit" />
+        android:layout_marginBottom="80dp"
+        android:inputType="textPersonName"
+        android:hint="@string/username"
+        android:singleLine="true"
+        android:background="@drawable/custom_edit"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText2" />
 
     <EditText
+        android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="254dp"
-        android:background="@drawable/custom_edit" />
+        android:background="@drawable/custom_edit"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:hint="@string/password"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="350dp" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/circ_button"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details"
+        android:textColor="@color/icons"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="99dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
