@@ -1,17 +1,18 @@
-package com.example.parking;
+package com.example.parking.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.service.autofill.Validator;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.parking.adapters.CarParksArrayAdapter;
+import com.example.parking.R;
 
 public class CarParkActivity extends AppCompatActivity {
 

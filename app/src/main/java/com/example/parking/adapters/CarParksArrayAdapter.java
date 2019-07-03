@@ -1,4 +1,4 @@
-package com.example.parking;
+package com.example.parking.adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
