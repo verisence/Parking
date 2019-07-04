@@ -26,11 +26,11 @@
         android:text="@string/email"
         android:textColor="@color/icons"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintBottom_toTopOf="@+id/editLogEmail"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/editLogEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:shadowColor="@color/icons"
@@ -50,10 +50,10 @@
         android:textColor="@color/icons"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editEmail" />
+        app:layout_constraintStart_toStartOf="@+id/editLogEmail" />
 
     <EditText
-        android:id="@+id/editPassW"
+        android:id="@+id/editLogPassW"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:shadowColor="@color/icons"

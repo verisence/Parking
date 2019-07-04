@@ -54,8 +54,7 @@
                 android:value="@integer/google_play_services_version" />
         </activity>
         <activity
-            android:name=".ui.MainActivity"
-            android:theme="@style/NoActionBarTheme">
+            android:name=".ui.MainActivity">
         </activity>
     </application>
 

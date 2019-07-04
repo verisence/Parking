@@ -18,8 +18,8 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
-    @BindView(R.id.editEmail) EditText editEmail;
-    @BindView(R.id.editPassW) EditText editPassW;
+    @BindView(R.id.editLogEmail) EditText editEmail;
+    @BindView(R.id.editLogPassW) EditText editPassW;
     @BindView(R.id.LoginButton) Button loginButton;
     @BindView(R.id.noAccount) TextView noAccount;
 
