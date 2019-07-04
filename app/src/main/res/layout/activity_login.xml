@@ -35,6 +35,8 @@
         android:layout_height="wrap_content"
         android:shadowColor="@color/icons"
         android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/icons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -58,6 +60,8 @@
         android:layout_height="wrap_content"
         android:shadowColor="@color/icons"
         android:singleLine="true"
+        android:inputType="textPassword"
+        android:textColor="@color/icons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

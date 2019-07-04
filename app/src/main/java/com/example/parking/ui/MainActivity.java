@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view == mHomeGobutton){
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this, MapsActivity.class);
             startActivity(intent);
         }
     }
