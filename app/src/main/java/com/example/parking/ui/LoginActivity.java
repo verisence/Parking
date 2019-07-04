@@ -1,6 +1,6 @@
 package com.example.parking.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -13,57 +13,50 @@ import android.widget.Toast;
 
 import com.example.parking.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
-    //declare variables
-    private Button mLoginButton;
-    private EditText mLoginUsername;
-    private EditText mLoginPassword;
-    private TextView mLoginText;
-
+    @BindView(R.id.editEmail) EditText editEmail;
+    @BindView(R.id.editPassW) EditText editPassW;
+    @BindView(R.id.LoginButton) Button loginButton;
+    @BindView(R.id.noAccount) TextView noAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //assign variables
-        mLoginButton = (Button) findViewById(R.id.loginButton);
-        mLoginUsername = (EditText) findViewById(R.id.loginUsername);
-        mLoginPassword = (EditText) findViewById(R.id.loginPassword);
-        mLoginText = (TextView) findViewById(R.id.loginText);
+        ButterKnife.bind(this);
 
         Typeface proximaLight = Typeface.createFromAsset(getAssets(), "fonts/light.ttf");
         Typeface proximaMedium = Typeface.createFromAsset(getAssets(), "fonts/med.ttf");
         Typeface proximaBold = Typeface.createFromAsset(getAssets(), "fonts/bold.ttf");
 
-        mLoginButton.setTypeface(proximaMedium);
-        mLoginText.setTypeface(proximaBold);
-        mLoginUsername.setTypeface(proximaLight);
-        mLoginPassword.setTypeface(proximaLight);
-
-
-        mLoginButton.setOnClickListener(this);
+        loginButton.setTypeface(proximaMedium);
+        noAccount.setTypeface(proximaBold);
+        loginButton.setOnClickListener(this);
+        noAccount.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-       if (view == mLoginButton){
-           if (mLoginUsername.getText().toString().equals("")||mLoginPassword.getText().toString().equals("")){
+       if (view == loginButton){
 
-               Toast.makeText(LoginActivity.this, "Please fill all the fields first", Toast.LENGTH_LONG).show();
-
-           }else{
-               String username = mLoginUsername.getText().toString();
+               String username = editEmail.getText().toString();
                Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
 
                intent.putExtra("username", username);
                startActivity(intent);
-
-               Toast.makeText(LoginActivity.this, "Welcome " + username, Toast.LENGTH_LONG).show();
-           }
-
        }
+
+       if (view == noAccount){
+           Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+           startActivity(intent);
+           finish();
+       }
+
     }
 }
