@@ -35,22 +35,6 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ui.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".ui.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.parking.ui.MainActivity"></meta-data>
-        </activity>
-        <activity android:name=".ui.CarParkActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.parking.ui.LoginActivity"></meta-data>
-            <meta-data
-                android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
-        </activity>
-        <activity
             android:name=".ui.MainActivity"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
