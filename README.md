@@ -32,15 +32,6 @@ This is an android app that allows the user to search for car parks in their loc
 | Home page                                                                                    | Login page                                                                                    | Car Parks Page                                                                                    |
 |-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
-| Home page                                                                                    | Login page                                                                                    | Car Parks Page                                                                                    |
-
-| ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
-| Home page                                                                                    | Login page                                                                                    | Car Parks Page                                                                                    |
-
-| ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
-| Home page                                                                                    | Login page                                                                                    | Car Parks Page                                                                                    |
-
-| ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
 
 # Known bugs
 * None at the moment

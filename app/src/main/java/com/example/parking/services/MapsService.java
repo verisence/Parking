@@ -30,7 +30,6 @@ public class MapsService {
     public static void findParking(Callback callback){
         OkHttpClient client = new OkHttpClient.Builder().build();
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.PLACES_BASE_URL).newBuilder();
-//        urlBuilder.addQueryParameter("location",  Double.toString(location.latitude)+","+Double.toString(location.longitude))
         urlBuilder.addQueryParameter("location",  Double.toString(location.latitude)+","+Double.toString(location.longitude))
                 .addQueryParameter("radius", "1000")
                 .addQueryParameter("type", "parking")
@@ -60,8 +59,6 @@ public class MapsService {
                     JSONObject parkingJSON = resultsJSON.getJSONObject(i);
                     String name = parkingJSON.getString("name");
                     String vicinity = parkingJSON.getString("vicinity");
-//                    double rating = parkingJSON.getDouble("rating");
-
                     Parking parking= new Parking(name, vicinity);
                     parkings.add(parking);
                 }

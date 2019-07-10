@@ -1,9 +1,11 @@
 package com.example.parking.models;
+import org.parceler.Parcel;
 
+@Parcel
 public class Parking {
     private String name;
     private String vicinity;
-//    private double rating;
+    private String pushId;
 
     public Parking() {
     }
@@ -11,7 +13,6 @@ public class Parking {
     public Parking(String name, String vicinity) {
         this.name = name;
         this.vicinity = vicinity;
-//        this.rating = rating;
     }
 
     public String getName() {
@@ -22,7 +23,11 @@ public class Parking {
         return vicinity;
     }
 
-//    public double getRating() {
-//        return rating;
-//    }
+    public String getPushId(){
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
+    }
 }

@@ -66,8 +66,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //parceler
-    implementation 'org.parceler:parceler-api:1.1.12'
-    annotationProcessor 'org.parceler:parceler:1.1.12'
+    implementation 'org.parceler:parceler-api:1.1.6'
+    annotationProcessor 'org.parceler:parceler:1.1.6'
     // OkHttp dependency
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 //    implementation files('libs/java-json.jar')

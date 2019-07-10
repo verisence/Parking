@@ -52,6 +52,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.ParkingListActivity"></activity>
+        <activity android:name=".ui.ParkingDetailActivity" />
     </application>
 
 </manifest>

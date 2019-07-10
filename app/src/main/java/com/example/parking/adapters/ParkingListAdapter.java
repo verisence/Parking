@@ -2,6 +2,7 @@ package com.example.parking.adapters;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 
 import com.example.parking.R;
 import com.example.parking.models.Parking;
-//import com.example.placesproject.ParkingDetailActivity;
+import com.example.parking.ui.ParkingDetailActivity;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
@@ -47,8 +50,7 @@ public class ParkingListAdapter extends RecyclerView.Adapter<ParkingListAdapter.
     public class ParkingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.parkingImageView) ImageView mParkingImageView;
         @BindView(R.id.parkingNameTextView) TextView mNameTextView;
-        @BindView(R.id.categoryTextView) TextView mCategoryTextView;
-        @BindView(R.id.ratingTextView) TextView mRatingTextView;
+        @BindView(R.id.locationTextView) TextView mLocationTextView;
         private Context mContext;
 
 
@@ -60,19 +62,17 @@ public class ParkingListAdapter extends RecyclerView.Adapter<ParkingListAdapter.
         }
 
         public void bindParking(Parking parking) {
-//            Picasso.get().load(parking.getImageUrl()).into(mParkingImageView);
             mNameTextView.setText(parking.getName());
-            mCategoryTextView.setText(parking.getVicinity());
-//            mRatingTextView.setText("Rating: " + parking.getRating() + "/5");
+            mLocationTextView.setText(parking.getVicinity());
         }
 
         @Override
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-//            Intent intent = new Intent(mContext, ParkingDetailActivity.class);
-//            intent.putExtra("position", itemPosition);
-//            intent.putExtra("parkings", Parcels.wrap(mParkings));
-//            mContext.startActivity(intent);
+            Intent intent = new Intent(mContext, ParkingDetailActivity.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("parkings", Parcels.wrap(mParkings));
+            mContext.startActivity(intent);
         }
     }
 }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ParkingDetailFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/parkingImageView"
+            android:src="@drawable/resimg"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="parking name"
+                android:id="@+id/parkingNameTextView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cuisineTextView"
+                android:layout_below="@+id/parkingNameTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/primary_text"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/saveParkingButton"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View On Google Maps"
+                    android:id="@+id/websiteTextView"
+                    android:drawableLeft="@drawable/ic_exit_to_app_white_24dp"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/icons"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/ic_exit_to_app_white_24dp" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:drawableLeft="@drawable/ic_map_white_24dp"
+                    android:drawableStart="@drawable/ic_map_white_24dp"
+                    android:drawablePadding="4dp"
+                    android:id="@+id/addressTextView"
+                    android:textColor="@color/icons"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveParkingButton"
+                android:text="Save Parking"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/icons"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
