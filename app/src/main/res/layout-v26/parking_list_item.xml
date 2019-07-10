@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:id="@+id/parkingImageView"
+        android:src="@drawable/resimg"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/parkingNameTextView"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:textStyle="normal"
+            android:text="name"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="location"
+            android:id="@+id/categoryTextView"
+            android:layout_below="@+id/parkingNameTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:textColor="@color/quantum_black_100"
+            android:textStyle="normal"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:id="@+id/ratingTextView"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="5dp"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

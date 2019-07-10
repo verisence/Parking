@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "652899377989",
+    "firebase_url": "https://egeza-245606.firebaseio.com",
+    "project_id": "egeza-245606",
+    "storage_bucket": "egeza-245606.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652899377989:android:5eed423c299aaed1",
+        "android_client_info": {
+          "package_name": "com.example.parking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652899377989-9471f2a5judktip6d3qdk658q5n43e1t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parking",
+            "certificate_hash": "c4c9fdc9c9aa5b5ffb996727176dfe35d1265632"
+          }
+        },
+        {
+          "client_id": "652899377989-jrfko6gdtcqpkkdb2gmril4o8p5fu8ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-HMGLaxIujjjIfJSKLSSNnCEmwS8qtQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652899377989-jrfko6gdtcqpkkdb2gmril4o8p5fu8ph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

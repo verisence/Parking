@@ -9,4 +9,13 @@
     <string name="park_text">Here are the car parks in your location:</string>
     <string name="egeza">Egeza</string>
     <string name="title_activity_maps">Map</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="existing_acc">Already have an account? Click here</string>
+    <string name="login">Login</string>
+    <string name="no_account">Do not have an account? Click here</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 </resources>

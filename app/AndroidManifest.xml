@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.CreateAccountActivity" />
+        <activity android:name=".ui.CreateAccountActivity">
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,26 +33,29 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".ui.MapsActivity"
+            android:label="@string/title_activity_maps" />
         <activity android:name=".ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.parking.ui.MainActivity" />
         </activity>
+        <activity android:name=".ui.CarParkActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.parking.ui.LoginActivity" />
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
         <activity
             android:name=".ui.MainActivity">
         </activity>
-        <activity
-            android:name=".ui.MapActivity"
-            android:label="@string/title_activity_map"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.PermissionsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.ParkingListActivity"></activity>
     </application>
 
 </manifest>
