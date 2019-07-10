@@ -13,6 +13,8 @@ import com.example.parking.adapters.FirebaseParkingViewHolder;
 import com.example.parking.models.Parking;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -31,6 +33,13 @@ public class SavedParkingListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking_list);
         ButterKnife.bind(this);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+        parkingsReference = FirebaseDatabase
+                .getInstance()
+                .getReference("parkings")
+                .child(uid);
 
         parkingsReference = FirebaseDatabase.getInstance().getReference("parkings");
         setUpFireBaseAdapter();

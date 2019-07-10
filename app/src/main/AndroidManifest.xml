@@ -53,6 +53,7 @@
         </activity>
         <activity android:name=".ui.ParkingListActivity"></activity>
         <activity android:name=".ui.ParkingDetailActivity" />
+        <activity android:name=".SavedParkingListActivity"/>
     </application>
 
 </manifest>

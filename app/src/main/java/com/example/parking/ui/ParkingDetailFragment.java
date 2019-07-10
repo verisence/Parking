@@ -1,6 +1,7 @@
 package com.example.parking.ui;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.parking.Constants;
 import com.example.parking.R;
+import com.example.parking.SavedParkingListActivity;
+import com.example.parking.SavedParkingListActivity_ViewBinding;
 import com.example.parking.models.Parking;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,6 +45,8 @@ public class ParkingDetailFragment extends Fragment implements View.OnClickListe
     TextView mAddressLabel;
     @BindView(R.id.saveParkingButton)
     TextView mSaveParkingButton;
+    @BindView(R.id.savedParkingButton)
+    TextView mSavedParkingButton;
 
     private Parking mParking;
 
@@ -69,6 +74,7 @@ public class ParkingDetailFragment extends Fragment implements View.OnClickListe
         mAddressLabel.setText(mParking.getVicinity());
         mWebsiteLabel.setOnClickListener(this);
         mSaveParkingButton.setOnClickListener(this);
+        mSavedParkingButton.setOnClickListener(this);
         return view;
     }
 
@@ -90,6 +96,11 @@ public class ParkingDetailFragment extends Fragment implements View.OnClickListe
             pushRef.setValue(mParking);
 
             Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+        }
+
+        if (v==mSavedParkingButton){
+            Intent intent = new Intent(getActivity(), SavedParkingListActivity.class);
+            startActivity(intent);
         }
 
     }

@@ -101,10 +101,21 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/savedParkingButton"
+                android:text="Saved Parking Lots"
+                android:layout_above="@id/saveParkingButton"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/icons"
+                android:textSize="15sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/saveParkingButton"
                 android:text="Save Parking"
                 android:layout_alignParentBottom="true"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:textColor="@color/icons"
                 android:textSize="15sp"/>
         </RelativeLayout>
