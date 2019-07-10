@@ -1,5 +1,5 @@
 # EGEZA
-A music based application that gives the user all info about an artist.It also gives the user the lyrics of his songs
+This is an android app that allows the user to search for car parks in their location or in the location that they search for.
 
 # Contributors
 * Phil Kipkemboi(kipkemboiphil@gmail.com)
@@ -31,6 +31,9 @@ A music based application that gives the user all info about an artist.It also g
 # Screenshots
 | Home page                                                                                    | Login page                                                                                    | Car Parks Page                                                                                    |
 |-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
+| ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
+| ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
 | ![<img src="/readme/EgezaHome.jpg"](/readme/EgezaHome.jpg) | ![<img src="/readme/EgezaLogin.jpg](/readme/EgezaLogin.jpg) | ![<img src="/readme/EgezaCarparks.jpg](/readme/EgezaCarparks.jpg) |
 
 # Known bugs
