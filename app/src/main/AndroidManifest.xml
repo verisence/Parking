@@ -33,9 +33,7 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".ui.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.parking.ui.MainActivity" />
+
         </activity>
         <activity
             android:name=".ui.MainActivity">
@@ -43,7 +41,12 @@
         <activity
             android:name=".ui.MapActivity"
             android:label="@string/title_activity_map"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.parking.ui.MainActivity">
+            </meta-data>
+        </activity>
         <activity android:name=".ui.PermissionsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,9 +54,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ParkingListActivity"></activity>
-        <activity android:name=".ui.ParkingDetailActivity" />
-        <activity android:name=".SavedParkingListActivity"/>
+        <activity android:name=".ui.ParkingListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.parking.ui.MapActivity">
+            </meta-data>
+        </activity>
+        <activity android:name=".ui.ParkingDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.parking.ui.ParkingListActivity">
+            </meta-data>
+        </activity>
+        <activity android:name=".SavedParkingListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.parking.ui.ParkingDetailActivity">
+            </meta-data>
+        </activity>
     </application>
 
 </manifest>
